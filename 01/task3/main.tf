@@ -8,7 +8,7 @@ terraform {
 #  required_version = ">=1.12.0" 
 }
 provider "docker" {
-  host     = "ssh://ubuntu@62.84.113.1:22"
+  host     = "ssh://ubuntu@51.250.10.248"
   ssh_opts = ["-o", "StrictHostKeyChecking=no", "-o", "UserKnownHostsFile=/dev/null"]
 }
 
