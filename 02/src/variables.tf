@@ -36,3 +36,45 @@ variable "vms_ssh_root_key" {
   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJOvLHUow4xL/do0YfCupDO3WTL5t5gy9aD5jMasc5fO lastir@netology"
   description = "ssh-keygen -t ed25519"
 }
+
+variable "os_family" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "OS family name"
+}
+
+variable "vm_web_name" {
+  type        = string
+  default     = "netology-develop-platform-web"
+  description = "VM name"
+}
+
+variable "vm_web_platform" {
+  type        = string
+  default     = "standard-v1"
+  description = "https://yandex.cloud/ru/docs/compute/concepts/vm-platforms"
+}
+
+variable "vm_web_cores" {
+  type        = number
+  default     = 2
+  description = "number of cores vCPU"
+}
+
+variable "vm_web_memory" {
+  type        = number
+  default     = 1
+  description = "memory in Gb for VM"
+}
+
+variable "vm_web_core_fraction" {
+  type        = number
+  default     = 5
+  description = "core fraction of vCPU"
+}
+
+variable "vm_web_preemptible" {
+  type        = bool
+  default     = true
+  description = "Preemptible VM"
+}
