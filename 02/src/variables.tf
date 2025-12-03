@@ -57,23 +57,23 @@ variable "vm_web_platform" {
   description = "https://yandex.cloud/ru/docs/compute/concepts/vm-platforms"
 }
 
-variable "vm_web_cores" {
-  type        = number
-  default     = 2
-  description = "number of cores vCPU"
-}
+# variable "vm_web_cores" {
+#   type        = number
+#   default     = 2
+#   description = "number of cores vCPU"
+# }
 
-variable "vm_web_memory" {
-  type        = number
-  default     = 1
-  description = "memory in Gb for VM"
-}
+# variable "vm_web_memory" {
+#   type        = number
+#   default     = 1
+#   description = "memory in Gb for VM"
+# }
 
-variable "vm_web_core_fraction" {
-  type        = number
-  default     = 5
-  description = "core fraction of vCPU"
-}
+# variable "vm_web_core_fraction" {
+#   type        = number
+#   default     = 5
+#   description = "core fraction of vCPU"
+# }
 
 variable "vm_web_preemptible" {
   type        = bool
@@ -109,4 +109,24 @@ variable "role_db" {
   type        = string
   default     = "db"
   description = "role db name"
+}
+
+variable "vms_resources" {
+  type = map(object({
+      cores         = number
+      memory        = number
+      core_fraction = number
+    }))
+  default = {
+    web = {
+      cores=2
+      memory=1
+      core_fraction=5
+    },
+    db = {
+      cores=2
+      memory=2
+      core_fraction=20
+    }
+  }
 }

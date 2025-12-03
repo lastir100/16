@@ -30,23 +30,23 @@ variable "vm_db_platform" {
   description = "https://yandex.cloud/ru/docs/compute/concepts/vm-platforms"
 }
 
-variable "vm_db_cores" {
-  type        = number
-  default     = 2
-  description = "number of cores vCPU"
-}
+# variable "vm_db_cores" {
+#   type        = number
+#   default     = 2
+#   description = "number of cores vCPU"
+# }
 
-variable "vm_db_memory" {
-  type        = number
-  default     = 2
-  description = "memory in Gb for VM"
-}
+# variable "vm_db_memory" {
+#   type        = number
+#   default     = 2
+#   description = "memory in Gb for VM"
+# }
 
-variable "vm_db_core_fraction" {
-  type        = number
-  default     = 20
-  description = "core fraction of vCPU"
-}
+# variable "vm_db_core_fraction" {
+#   type        = number
+#   default     = 20
+#   description = "core fraction of vCPU"
+# }
 
 variable "vm_db_preemptible" {
   type        = bool
