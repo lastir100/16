@@ -45,11 +45,11 @@ variable "os_family" {
   description = "OS family name"
 }
 
-variable "vm_web_name" {
-  type        = string
-  default     = "netology-develop-platform-web"
-  description = "VM name"
-}
+# variable "vm_web_name" {
+#   type        = string
+#   default     = "netology-develop-platform-web"
+#   description = "VM name"
+# }
 
 variable "vm_web_platform" {
   type        = string
@@ -79,4 +79,34 @@ variable "vm_web_preemptible" {
   type        = bool
   default     = true
   description = "Preemptible VM"
+}
+
+variable "org" {
+  type        = string
+  default     = "netology"
+  description = "organization name"
+}
+
+variable "env" {
+  type        = string
+  default     = "develop"
+  description = "environment"
+}
+
+variable "project" {
+  type        = string
+  default     = "platform"
+  description = "project name"
+}
+
+variable "role_web" {
+  type        = string
+  default     = "web"
+  description = "role web name"
+}
+
+variable "role_db" {
+  type        = string
+  default     = "db"
+  description = "role db name"
 }

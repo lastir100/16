@@ -18,11 +18,11 @@ variable "vpc_name_b" {
 
 
 
-variable "vm_db_name" {
-  type        = string
-  default     = "netology-develop-platform-db"
-  description = "VM name"
-}
+# variable "vm_db_name" {
+#   type        = string
+#   default     = "netology-develop-platform-db"
+#   description = "VM name"
+# }
 
 variable "vm_db_platform" {
   type        = string
