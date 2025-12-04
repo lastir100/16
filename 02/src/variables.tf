@@ -131,24 +131,24 @@ variable "vms_resources" {
   }
 }
 
-locals {
-  type = tuple([
-    object({
-        dev1 = tuple([
-            string,
-            string,
-        ]),
-    }),
-    object({
-        dev2 = tuple([
-            string,
-            string,
-        ]),
-    }),
-])
-  test = [
-    { dev1 = ["ssh -o 'StrictHostKeyChecking=no' ubuntu@${yandex_compute_instance.platform.network_interface[0].nat_ip_address}", yandex_compute_instance.platform.network_interface[0].ip_address] },
-    { dev2 = ["ssh -o 'StrictHostKeyChecking=no' ubuntu@${yandex_compute_instance.platform-db.network_interface[0].nat_ip_address}", yandex_compute_instance.platform-db.network_interface[0].ip_address] }
+# locals {
+#   type = tuple([
+#     object({
+#         dev1 = tuple([
+#             string,
+#             string,
+#         ]),
+#     }),
+#     object({
+#         dev2 = tuple([
+#             string,
+#             string,
+#         ]),
+#     }),
+# ])
+#   test = [
+#     { dev1 = ["ssh -o 'StrictHostKeyChecking=no' ubuntu@${yandex_compute_instance.platform.network_interface[0].nat_ip_address}", yandex_compute_instance.platform.network_interface[0].ip_address] },
+#     { dev2 = ["ssh -o 'StrictHostKeyChecking=no' ubuntu@${yandex_compute_instance.platform-db.network_interface[0].nat_ip_address}", yandex_compute_instance.platform-db.network_interface[0].ip_address] }
 
-  ]
-}
+#   ]
+# }
