@@ -112,6 +112,13 @@ variable "vms_resources" {
       core_fraction = 5
       disk_size     = 5
       disk_type     = "network-hdd"
+    },
+    storage = {
+      cores         = 2
+      memory        = 1
+      core_fraction = 5
+      disk_size     = 5
+      disk_type     = "network-hdd"
     }
   }
 }
