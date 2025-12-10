@@ -25,8 +25,8 @@ data "template_file" "cloudinit" {
 module "test-vm" {
   source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   network_id     = module.vpc_dev.network_id
-  subnet_zones   = [module.vpc_dev.subnet_zone]
-  subnet_ids     = [module.vpc_dev.subnet_id]
+  subnet_zones   = [module.vpc_dev.subnet_zones]
+  subnet_ids     = [module.vpc_dev.subnet_ids]
   instance_name  = "vm-marketing"
   instance_count = 1
   image_family   = "ubuntu-2004-lts"
