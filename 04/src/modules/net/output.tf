@@ -7,7 +7,7 @@ output "subnet_ids" {
   value = yandex_vpc_subnet.vpc_subnet[*].id
 }
 
-output "zones" {
+output "subnet_zones" {
   value = yandex_vpc_subnet.vpc_subnet[*].zone
 }
 

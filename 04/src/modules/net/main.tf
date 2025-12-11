@@ -15,5 +15,5 @@ resource "yandex_vpc_subnet" "vpc_subnet" {
   name           = "${var.env_name}-${count.index}"
   zone           = var.subnets[count.index].zone
   network_id     = yandex_vpc_network.vpc_net.id
-  v4_cidr_blocks = var.subnets[count.index].cidr
+  v4_cidr_blocks = [var.subnets[count.index].cidr]
 }
