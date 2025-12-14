@@ -33,9 +33,10 @@ module "vm-marketing" {
   instance_name  = "vm-marketing"
   instance_count = 3
   image_family   = "ubuntu-2004-lts"
-  public_ip      = true
+  public_ip      = false
   platform       = "standard-v3"
   instance_core_fraction = 20
+  security_group_ids = [enpi43u1dd649qii6q5l]
 
   labels = { 
     owner= "a.minin",
@@ -57,7 +58,8 @@ module "vm-analytics" {
   instance_name  = "vm-analytics"
   instance_count = 1
   image_family   = "ubuntu-2004-lts"
-  public_ip      = true
+  public_ip      = false
+  security_group_ids = [enpi43u1dd649qii6q5l]
 
     labels = { 
     owner= "a.minin",
